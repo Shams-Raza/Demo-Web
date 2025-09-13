@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+
 </head>
 <body>
     <!-- top-banner -->
     <div class="top-banner">
         <div class="container">
-                    <div class="small-bold-text banner-text">🤡 New to Usability Hub: Open and Closed card sorrting</div>
+                    <div class="small-bold-text banner-text">🥳 New to Usability Hub: Open and Closed card sorrting</div>
 
         </div>
     </div>
@@ -20,7 +22,7 @@
             <a href="#" class="company-logo">
              <img src="./assets/asset 2.svg" alt="company-logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links " id="nav-links">
                <ul class="flex">
                    <li><a href="#" class="hover-link">Products</a></li>
                    <li><a href="#" class="hover-link">Customer</a></li>
@@ -30,6 +32,9 @@
                    <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+                </a>
         </div>
     </nav>
     <!-- header section -->
@@ -38,7 +43,7 @@
             <div class="header-left">
                 <h1>Design Confidently</h1>
                 <p>UsabilityHub is a remote user research platform thst tskes guesswork out of design decisions by validating them with real users.</p>
-                <a class="primary-button get-started-btn" href="#"> Get Stated</a>
+                <a class="primary-button get-started-btn" href="#"> Get Started</a>
 
             </div>
             <div class="header-right">
@@ -118,7 +123,7 @@
         </div>
     </section>
      <!-- big features section -->
-    <section class="big-festure-section">
+    <section class="big-feature-section">
         <div class="container flex big-feature-container">
             <div class="feature-img">
                 <img width="100%" src="./assets/asset 23.svg" alt="">
@@ -130,8 +135,8 @@
             </div>
         </div>
     </section>
-    <section class="big-festure-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+    <section class="big-feature-section">
+        <div class="container flex big-feature-container" id="second-big-feature">
             <div class="feature-img">
                 <img width="100%" src="./assets/asset 24.svg" alt="">
             </div>
@@ -142,7 +147,7 @@
             </div>
         </div>
     </section>
-    <section class="big-festure-section">
+    <section class="big-feature-section">
         <div class="container flex big-feature-container">
             <div class="feature-img">
                 <img width="100%" src="./assets/asset 25.svg" alt="">
@@ -240,5 +245,14 @@
 
 
     <script src="https://kit.fontawesome.com/2de6409d50.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navlinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navlinks.classList.toggle('active');
+        })
+
+    </script>
 </body>
 </html>
